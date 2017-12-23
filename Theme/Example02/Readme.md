@@ -21,6 +21,8 @@ regions:
   footer: Footer
 ```
 
+To see the output goto structure->block layout. Here you can see the region that you have included for this theme.
+
 Drupal folder structure
 
 ```html
