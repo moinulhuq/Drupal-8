@@ -21,6 +21,7 @@ Now if you refresh your appearance tab from admin panel it should show your them
 myth.info.yml
 -------------
 
+```yml
 name: Myth
 description: A starter theme for Drupal 8.
 type: theme
@@ -30,13 +31,14 @@ stylesheets-remove:
   - core/modules/system/css/system.module.css
   - core/modules/system/css/system.theme.css
   - core/modules/views/css/views.module.css
-
+```
 
 5. Now add your css and js using "myth.libraries.yml"
 
 myth.libraries.yml
 ------------------
 
+```yml
 global-css:
   css:
     theme:
@@ -51,27 +53,32 @@ global-js:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+```
 
 i.e "css" folder has "style.css" and "js" folder has "script.js" and has dependencies various library.
 
 style.css
 ---------
 
+```css
 body{
 	color: red;	
 }
+```
 
 script.js
 ---------
 
+```javascript
 alert("Hi from myth");
-
+```
 
 6. Now add your libraries reference to "myth.info.yml".
 
 myth.info.yml
 -------------
 
+```yml
 name: Myth
 description: A starter theme for Drupal 8.
 type: theme
@@ -83,10 +90,11 @@ stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css
   - core/modules/system/css/system.module.css
   - core/modules/system/css/system.theme.css
-
+```
 
 Drupal folder structure
 
+```html
 Drupal
 	-core
 	-modules
@@ -102,3 +110,4 @@ Drupal
 					style.css
 				-js
 					script.js
+```
