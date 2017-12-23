@@ -55,7 +55,7 @@ Classy
 
 Drupal folder structure
 
-```yml
+```html
 Drupal
 	-core
 	-modules
