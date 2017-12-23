@@ -6,12 +6,12 @@
 
 myth.info.yml
 -------------
-
+<code>
 name: Myth
 description: A starter theme for Drupal 8.
 type: theme
 core: 8.x
-
+</code>
 Now if you refresh your appearance tab from admin panel it should show your theme.
 
 
