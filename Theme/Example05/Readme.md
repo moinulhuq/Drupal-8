@@ -2,6 +2,7 @@
 
 myth.libraries.yml
 ------------------
+```yml
 global-css:
   css:
     theme:
@@ -13,11 +14,11 @@ global-js:
     js/script.js: {}
   dependencies:
     - core/jquery
-
+```
 
 2. Specify Media Type for css
 
-```yml
+```html
 css/base.css: {} for all
 
 	<style media="all">
