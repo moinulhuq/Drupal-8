@@ -1,0 +1,150 @@
+1. If you want to change the position of an asset from the footer to header, you can set header: true.
+
+myth.libraries.yml
+------------------
+global-css:
+  css:
+    theme:
+      css/style.css: {}
+
+global-js:
+  header: true
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+
+
+2. Specify Media Type for css
+
+```html
+css/base.css: {} for all
+
+	<style media="all">
+		@import url("/uniservice/themes/custom/myth/css/base.css?p1h2zh");
+	</style>
+
+css/style.css: { media: screen} for screen
+
+	<style media="screen">
+		@import url("/uniservice/themes/custom/myth/css/style.css?p1h2zh");
+	</style>
+```
+
+And so on...
+
+myth.libraries.yml
+------------------
+```yml
+global-css:
+  css:
+    theme:
+      css/base.css: {}
+      css/style.css: { media: screen}
+      css/print.css: { media: print}
+      css/myth.css: { media: "screen,print" }
+
+global-js:
+  header: true
+  js:
+    js/script.js: {}
+  dependencies:
+    - core/jquery
+```
+
+3. include css and javascript library from local
+
+myth.libraries.yml
+------------------
+```yml
+global-css:
+  css:
+    theme:
+      css/base.css: {}
+      css/style.css: { media: screen}
+      css/print.css: { media: print}
+      css/myth.css: { media: "screen,print" }
+      includes/bootstrap4/css/bootstrap.min.css: {}
+global-js:
+  header: true
+  js:
+    js/script.js: {}
+    includes/bootstrap4/js/bootstrap.js: {}
+  dependencies:
+    - core/jquery
+```
+Drupal folder structure
+
+```html
+Drupal
+	-core
+	-modules
+	-profiles
+	-sites
+	-vendor
+	-themes
+		-custom
+			-myth
+				myth.info.yml
+				myth.libraries.yml
+				-css
+					style.css
+				-js
+					script.js
+				-includes
+					bootstrap4
+						css
+							bootstrap.min.css
+						js
+							bootstrap.js
+```
+
+4. include css and javascript library and google font from CDN and externally
+
+myth.libraries.yml
+------------------
+```yml
+global-css:
+  css:
+    theme:
+      css/base.css: {}
+      css/style.css: { media: screen}
+      css/print.css: { media: print}
+      css/myth.css: { media: "screen,print" }
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Titillium+Web': { type: external, minified: true }
+global-js:
+  header: true
+  js:
+    js/script.js: {}
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js': { type: external, minified: true }
+  dependencies:
+    - core/jquery
+```
+
+4. Conditional CSS or JS for Old IE Browsers
+
+myth.libraries.yml
+------------------
+```yml
+global-css:
+  css:
+    theme:
+      css/base.css: {}
+      css/style.css: { media: screen}
+      css/print.css: { media: print}
+      css/myth.css: { media: "screen,print" }
+      includes/bootstrap4/css/bootstrap.min.css: {}
+      'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Titillium+Web': { type: external, minified: true }
+      'http://yui.yahooapis.com/3.18.1/build/yui/yui-min.css': { type: external, browsers: { IE: 'lte IE 8', '!IE': false } }
+global-js:
+  header: true
+  js:
+    js/script.js: {}
+    includes/bootstrap4/js/bootstrap.js: {}
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js': { type: external, minified: true }
+    'http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js': { type: external, browsers: { IE: 'lte IE 8', '!IE': false } }    
+  dependencies:
+    - core/jquery
+```
