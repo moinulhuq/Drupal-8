@@ -1,6 +1,6 @@
 1. If you want to change the look of your page, you can create your own "page.html.twig". "page.html.twig" is the main display of your home page. by default it is located at "core\modules\system\templates\page.html.twig".
 
-To enable Twig Debug = true follow this if there is no services.yml here; then make a copy of the default.services.yml file and rename it to services.yml and under that file make twig.config debug: true.
+To enable Twig Debug = true follow this if there is no services.yml here; then make a copy of the default.services.yml file and rename it to services.yml and under that file make twig.config debug: true auto_reload: true cache: false.
 
 Now lets create our own "page.html.twig" instead of using default. Create /theme/custom/myth/templates/page.html.twig
 
@@ -50,7 +50,7 @@ We have created basic html regions for the page, including headline, header, mai
 	{{ dump(foo) }} Print content of the foo variable
 ```
 
-And final code of "page.html.twig"
+And final code of "page.html.twig" is
 
 ```html
 <h1> Hello world </h1>
