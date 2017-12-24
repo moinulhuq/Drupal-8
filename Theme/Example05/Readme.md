@@ -17,7 +17,7 @@ global-js:
 
 2. Specify Media Type for css
 
-```html
+```yml
 css/base.css: {} for all
 
 	<style media="all">
