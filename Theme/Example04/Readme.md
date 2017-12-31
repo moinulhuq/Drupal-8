@@ -4,8 +4,8 @@ To enable Twig Debug = true follow this if there is no services.yml here; then m
 ```yml
 twig.config 
  debug: true 
- auto_reload: 
- true cache: false.
+ auto_reload: true 
+ true cache: false
 ```
 Now lets create our own "page.html.twig" instead of using default. Create /theme/custom/myth/templates/page.html.twig
 
