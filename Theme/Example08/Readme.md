@@ -58,7 +58,7 @@ terminal
 terminal
 --------
 ```
-> npm install browser-sync gulp sass --save
+> npm install browser-sync gulp gulp-sass --save
 ```
 
 After isntalling all of the package, the "package.json" will look llike 
@@ -80,11 +80,50 @@ package.json
   "dependencies": {
     "bootstrap": "^4.0.0-beta.3",
     "browser-sync": "^2.23.2",
-    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.9",
-    "sass": "^1.0.0-beta.4"
+    "popper.js": "^1.12.9"
   }
 }
 ```
+
+6. Now we need "gulpfile.js" in our theme root directory "myth".
+
+terminal
+--------
+```
+~/Sites/uniservice/themes/custom/myth$> touch gulpfile.js
+```
+
+then copy all the code from "browsersync" website documentation and paste it into "gulpfile.js".
+
+gulpfile.js
+------------
+```javascript
+var gulp        = require('gulp');
+var browserSync = require('browser-sync').create();
+var sass        = require('gulp-sass');
+
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], function() {
+
+    browserSync.init({
+        server: "./app"
+    });
+
+    gulp.watch("app/scss/*.scss", ['sass']);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
+});
+
+// Compile sass into CSS & auto-inject into browsers
+gulp.task('sass', function() {
+    return gulp.src("app/scss/*.scss")
+        .pipe(sass())
+        .pipe(gulp.dest("app/css"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('default', ['serve']);
+```
+
