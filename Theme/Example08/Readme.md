@@ -83,7 +83,7 @@ package.json
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.13.0"
   }
 }
 ```
