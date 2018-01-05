@@ -78,9 +78,9 @@ terminal
 terminal
 --------
 ```
-> npm install gulp -save-dev
-> npm install gulp-uglify -save-dev
-> npm install gulp-concat -save-dev
+> npm install gulp --save-dev
+> npm install gulp-uglify --save-dev
+> npm install gulp-concat --save-dev
 ```
 
 Here "gulp-uglify" will help to minified the javascript file and "gulp-concat" will concate two files content in one file. For more plugins visit "https://gulpjs.com/plugins/"
@@ -91,6 +91,15 @@ terminal
 --------
 ```
 > npm install angular --save-dev
+```
+
+9. At last update and upgrade 'npm' to get the updated packages.
+
+terminal
+--------
+```
+> npm update
+> npm upgrade
 ```
 
 After isntalling all of the package, the "package.json" will look llike 
@@ -112,7 +121,7 @@ package.json
   "devDependencies": {
     "angular": "^1.6.8",
     "bootstrap": "^4.0.0-beta.3",
-    "browser-sync": "^2.23.2",
+    "browser-sync": "^2.23.3",
     "child_process": "^1.0.2",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
@@ -120,7 +129,7 @@ package.json
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "jquery": "^3.2.1",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.13.0"
   }
 }
 ```
@@ -256,4 +265,3 @@ gulp.task('watch',['browser-sync','sass','clearcache'], function(){
  * to run type 'gulp' and to close 'ctrl+c'
  */
 ```
-
