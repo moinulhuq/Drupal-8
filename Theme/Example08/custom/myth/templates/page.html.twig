@@ -1,0 +1,34 @@
+<h1> Hello Moin tanim shajibs</h1>
+<div id="page">
+
+  {% if page.headline %}
+    <section id="headline">
+      {{ page.headline }}
+    </section>
+  {% endif %}
+
+  {% if page.header %}
+      <header>
+        {{ page.header }}
+      </header>
+  {% endif %}
+    
+    <section id="main">
+      <div id="content">
+            {{ page.content }}
+        </div>
+            
+      {% if page.sidebar %}
+          <aside id="sidebar">
+               {{ page.sidebar }}
+          </aside>
+      {% endif %}
+    </section>
+
+    {% if page.footer %}
+      <footer>
+        {{ page.footer }}
+      </footer>
+  {% endif %}
+
+</div>

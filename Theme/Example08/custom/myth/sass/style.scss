@@ -1,0 +1,10 @@
+@import '_variable.scss';
+
+body{
+
+	color: $bgcolor;
+}
+
+p{
+	transition: width 40s;
+}
