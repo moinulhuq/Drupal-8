@@ -1,1 +1,0 @@
-alert('moin is good boy');
