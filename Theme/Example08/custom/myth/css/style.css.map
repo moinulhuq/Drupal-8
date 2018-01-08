@@ -1,1 +1,0 @@
-{"version":3,"sources":["style.scss","_variable.scss"],"names":[],"mappings":"AAEA;EAEC,WCJY,EDKZ;;AAED;EACC,8BAAqB;EAArB,yBAAqB;EAArB,sBAAqB,EACrB","file":"style.css","sourcesContent":["@import '_variable.scss';\n\nbody{\n\n\tcolor: $bgcolor;\n}\n\np{\n\ttransition: width 40s;\n}","$bgcolor: red;"]}

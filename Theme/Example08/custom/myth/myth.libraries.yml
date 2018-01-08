@@ -3,7 +3,7 @@ global-css:
     theme:      
       includes/bootstrap/css/bootstrap.min.css: {}
       includes/font-awesome/css/font-awesome.min.css: {}
-      css/style.css: {}
+      css/site.css: {}
 global-js:
   header: true
   js:    
