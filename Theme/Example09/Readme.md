@@ -1,4 +1,4 @@
-1. If you want to add "Hello World" to the existing twig template then copy "page.html.twig" from core/modules/system/templates/page.html.twig and paste it to your myth/templates folder then start editing that page and write "<h1>Hello World</h1>".
+1. If you want to add "Hello World" to the existing twig template then copy "page.html.twig" from core/modules/system/templates/page.html.twig and paste it to your myth/templates folder then start editing that page.
 
 page.html.twig
 ---------------
