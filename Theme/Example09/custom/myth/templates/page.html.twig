@@ -1,0 +1,29 @@
+<div class="page">
+   <header class="header" role="header">
+      <div class="container">
+         {{ page.header }}
+      </div>
+   </header>
+   <nav id="menubar" class="navbar navbar-default" role="navigation">
+      <div class="container">
+         {{ page.menubar }}
+      </div>
+   </nav>
+   <section id="main" class="main" role="main">
+      <div class="container">
+         <div class="row">
+            <aside class="sidebar col-sm-3">
+               {{ page.sidebar }}
+            </aside>
+            <div class="content col-sm-9">
+               {{ page.content }}
+            </div>
+         </div>
+      </div>
+   </section>
+   <footer class="footer" role="footer">
+      <div class="container">
+         {{ page.footer }}
+      </div>
+   </footer>
+</div>
