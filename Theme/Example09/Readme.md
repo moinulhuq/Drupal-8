@@ -2,7 +2,9 @@
 
 page.html.twig
 ---------------
+```html
 <h1>Hello World</h1>
+```
 
 clear cache and call home page of your site, then it will display.
 
