@@ -47,6 +47,7 @@ Here "page.html.twig" template, you can construct your page by using html markup
 
 page.html.twig
 ---------------
+```html
 <div class="page">
    <header class="header" role="header">
       <div class="container">
@@ -76,11 +77,13 @@ page.html.twig
       </div>
    </footer>
 </div>
+```
 
 As you can see, In Drupal 8, every "page" has multiple regions and every region contains one or more blocks.
 
 page
 -----
+```
 Header region
   -Banner block
 
@@ -94,6 +97,7 @@ content section
 
 footer region
   -footer block
+```
 
 If you want to display any content in your page you need to create a block and place it to the specific region only then it will display.
 
