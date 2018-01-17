@@ -1,0 +1,1 @@
+{"version":3,"sources":["site.scss"],"names":[],"mappings":"AAEA;EAEE,kBAAiB;EACjB,mBAAkB;EAClB,gBAAe;EACf,YAAW,EACX","file":"site.css","sourcesContent":["@import '_attach.scss';\n\n.footer{\n\th2{\n\t\tborder: 1px solid;\n\t\ttext-align: center;\n\t\tfont-size: 14px;\n\t\tcolor: grey;\n\t}\n}\n"]}
