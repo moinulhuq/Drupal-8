@@ -1,4 +1,4 @@
-Drupal custom block permission access permission
+Drupal custom block access permission
 
 Visible only if logged in otherwise hidden
 
