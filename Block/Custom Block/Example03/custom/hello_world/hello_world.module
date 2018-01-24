@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+use Drupal\Core\Render\Markup;
+/**
+ * Implements hook_block_view_alter().
+ */
+function hello_world_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block)
+{
+//    var_dump($build);
+//    exit();
+    $foo = "bar";
+//    $build['content']['#markup'] = Markup::create('Your text');
+    if ($block->getBaseId() === 'block_content') {
+        $build['#pre_render'][] = '_yourmodule_block_poweredby_prerender';
+    }
+}
+
+function _yourmodule_block_poweredby_prerender(array $build) {
+    $build = array
+    (
+       'content' => array
+        (   '#subject' => t('Syndicate'),
+            '#markup' => t('These are the block contents'),
+        ),
+    );
+//    //$build['content']['#markup'] = Markup::create('Your text');
+    return $build;
+}
