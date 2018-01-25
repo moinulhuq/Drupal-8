@@ -35,6 +35,9 @@ class ArticleBlock extends BlockBase {
             '#title' => $this->t('Hello message'),
             '#description' => $this->t('Who do you want to say hello to?'),
             '#default_value' => isset($config['article_block_content']) ? $config['article_block_content'] : '',
+            '#maxlength' => 64,
+            '#size' => 64,
+            '#weight' => '1',
         );
 
         return $form;
