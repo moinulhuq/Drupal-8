@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+
+use Drupal\block\Entity\Block;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\Core\Block\BlockPluginInterface;
+
+require_once "hello_world.helpers.inc";
+
+/**
+ * Implements hook_block_access().
+ */
+function hello_world_block_access(Block $block, $operation, AccountInterface $account){
+
+/*----- This will prevent "powered by drupal" display in different region except footer. ---*/
+
+/*
+  if ($operation == 'view' && $block->getPluginId() == 'system_powered_by_block') {
+        return AccessResult::forbiddenIf($block->getRegion() != 'footer');
+    }
+
+    return AccessResult::neutral();
+*/
+
+/*------- This will disable custom article block if "Anonymous". ----*/
+
+    $block->enable();
+
+    if($account->isAnonymous() && $block->getPluginId() == 'article_block'){
+        $block->disable();
+    }
+
+}
+
+/**
+ * Implements hook_block_view_BASE_BLOCK_ID_alter().
+ */
+function hello_world_block_view_search_form_block_alter(array &$build, BlockPluginInterface $block)
+{
+    $build['#pre_render'][] = 'form_callback';
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function hello_world_block_view_alter(array &$build, BlockPluginInterface $block)
+{
+    $foo = "bar";
+
+    if ($block->getBaseId() === 'search_form_block') {
+        $build['#pre_render'][] = 'form_callback';
+    }
+
+    if ($block->getBaseId() === 'article_block') {
+        $build['#pre_render'][] = 'hello_callback';
+    }
+
+}
+
+/**
+ * Implements hook_block_build_alter().
+ */
+function hello_world_block_build_alter(array &$build, BlockPluginInterface $block)
+{
+    $build['#cache']['contexts'][] = 'user';
+}
+
+/**
+ * Implements hook_block_build_BASE_BLOCK_ID_alter().
+ */
+function hello_world_block_build_article_block_alter(array &$build, BlockPluginInterface $block)
+{
+    $build['#cache']['contexts'][] = 'user';
+}
+
