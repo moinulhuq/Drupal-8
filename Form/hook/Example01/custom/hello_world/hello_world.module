@@ -1,0 +1,117 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/*
+public function buildForm(array $form, FormStateInterface $form_state) {
+    $form['name'] = [
+        '#type' => 'textfield',
+        '#title' => t('Name: '),
+        '#placeholder' => t('Name...'),
+        '#attributes' => ['autofocus' => 'autofocus', ],
+        '#weight'=> 1,
+        '#required' => false,
+        '#prefix' => '<div class="form-group">',
+        '#ajax' => $this->AjaxBlock('validateNameAjax', 'input-error-name'),
+        '#suffix' => '</div>'
+    ];
+    $form['input-error-name'] = [
+        '#type' => 'container',
+        '#attributes' => ['id' => 'input-error-name'],
+    ];
+    $form['gender'] = [
+        '#type' => 'select',
+        '#title' => ('Gender'),
+        '#options' => [
+            'neutral' => t('Please Select...'),
+            'Female' => t('Female: '),
+            'male' => t('Male'),
+        ],
+        '#weight'=> 2,
+        '#prefix' => '<div class="form-group">',
+        '#ajax' => $this->AjaxBlock('validateGenderAjax', 'input-error-gender'),
+        '#suffix' => '</div>'
+    ];
+    $form['input-error-gender'] = [
+        '#type' => 'container',
+        '#attributes' => ['id' => 'input-error-gender'],
+    ];
+    $form['submit'] = [
+        '#type' => 'submit',
+        '#weight'=> 3,
+        '#value' => t('Submit'),
+    ];
+
+    return $form;
+}
+*/
+
+/**
+ * Implements hook_form_alter().
+ */
+function hello_world_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+    if ($form_id == 'search_block_form') {
+
+        // It was 'Search' but now Become 'New Search'
+        $form['#title'] = t('New Search');
+
+        // To change the title of the field was "Enter the terms you wish to search for."
+        $form['keys']['#attributes']['title'] = "Enter a new search";
+
+        // Text to display under the form field "Enter your keyword"
+        $form['keys']['#description'] = "Enter your keyword";
+
+        // To increase the width of text field
+        $form['keys']['#size'] = 100;
+
+        // To place the placeholder
+        $form['keys']['#attributes']['placeholder'] = t("Search");
+
+        // To change the type of the submit button
+        $form['actions']['submit']['#value'] = 'New Search';
+
+        // Change the button image
+        $form['actions']['submit'] = ['#type' => 'image_button', '#src' => 'https://images-na.ssl-images-amazon.com/images/I/61QKhYL%2BeCL.png'];
+
+    }
+    if ($form_id == 'general_form') {
+
+        $form['#title'] =  "Simple form";
+
+        $form['name']['#attributes']['onblur'] = "if (this.value == '') {this.value = 'Search';}";
+
+        $form['name']['#attributes']['onsubmit'] = "if(this.search_block_form.value=='Search'){ alert('Please enter a search'); return false; }";
+
+        $form['gender']['#options']['male'] = t('male');
+    }
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function hello_world_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+    // Adding terms and Condition field just before submit button
+    $form['terms_of_use'] = array(
+        '#type' => 'checkbox',
+        '#weight'=> 2,
+        '#title' => t("I agree with the website's terms and conditions."),
+        '#required' => TRUE,
+    );
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function hello_world_form_BASE_FORM_ID_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+    // To get form base id use "$form_state->getBuildInfo()['base_form_id']"
+}
+

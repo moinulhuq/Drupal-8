@@ -1,0 +1,9 @@
+
+hello_world.general_form:
+  path: '/hello_world/form/general'
+  defaults:
+    _form: '\Drupal\hello_world\Form\GeneralForm'
+    _title: 'GeneralForm'
+  requirements:
+    _access: 'TRUE'
+  
