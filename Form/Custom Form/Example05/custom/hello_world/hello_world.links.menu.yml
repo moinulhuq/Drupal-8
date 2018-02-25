@@ -1,0 +1,7 @@
+hello_world.general_config_form:
+  title: 'General Config'
+  route_name: hello_world.general_config_form
+  description: 'A description for the menu entry'
+  parent: system.admin_config_system
+  weight: 99
+
