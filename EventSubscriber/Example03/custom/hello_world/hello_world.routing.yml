@@ -1,0 +1,9 @@
+
+hello_world.default_form:
+  path: '/hello_world/form/default'
+  defaults:
+    _form: '\Drupal\hello_world\Form\DefaultForm'
+    _title: 'DefaultForm'
+  requirements:
+    _access: 'TRUE'
+  
