@@ -115,15 +115,15 @@ services:
 Step04: Dispatch the event where you need.
 
 ```php
-	use Drupal\hello_world\Event\GeneralEvent;
+use Drupal\hello_world\Event\GeneralEvent;
 
-	// Load dispatcher object through services.
-	$dispatcher = \Drupal::service('event_dispatcher');
+// Load dispatcher object through services.
+$dispatcher = \Drupal::service('event_dispatcher');
 
-	// creating our event class object.
-	$event = new GeneralEvent("Moin");
+// creating our event class object.
+$event = new GeneralEvent("Moin");
 
-	// Dispatching the event through the ‘dispatch’  method,
-	// Passing event name and event object ‘$event’ as parameters.
-	$dispatcher->dispatch('general.event', $event);
+// Dispatching the event through the ‘dispatch’  method,
+// Passing event name and event object ‘$event’ as parameters.
+$dispatcher->dispatch('general.event', $event);
 ```
