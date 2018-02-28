@@ -1,0 +1,16 @@
+
+hello_world.email_download_controller_Email:
+  path: '/hello_world/Email'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\EmailDownloadController::Email'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+hello_world.media_download_controller_Media:
+  path: '/hello_world/Media'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\MediaDownloadController::Media'
+    _title: ''
+  requirements:
+    _permission: 'access content'

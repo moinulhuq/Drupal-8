@@ -1,0 +1,6 @@
+services:
+  hello_world.default:
+    class: Drupal\hello_world\EventSubscriber\GeneralEventSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
