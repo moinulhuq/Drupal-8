@@ -1,0 +1,1 @@
+Define an Event, Dispatcher and Subscriber to log when any node create using .module

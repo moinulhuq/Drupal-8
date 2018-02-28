@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\hello_world\Event\GeneralEvent;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function hello_world_node_insert(EntityInterface $entity)
+{
+   \Drupal::service('event_dispatcher')->dispatch('hello_world.nodeInsert', new GeneralEvent($entity));
+}
