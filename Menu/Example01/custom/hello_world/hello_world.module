@@ -1,0 +1,60 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+
+/**
+ * Implements hook_install().
+ */
+function hello_world_install()
+{
+    $menu_list = [
+        'Products' => ['Laptop' => 'Laptop', 'TV' => 'TV'],
+        'AboutUs' => 'AboutUs',
+        'ContactUs' => 'ContactUs'
+    ];
+
+    $menu = 'main';
+    $menu_handler = \Drupal::service('plugin.manager.menu.link');
+    $menu_handler->deleteLinksInMenu($menu);
+
+    foreach ($menu_list as $first_key => $first_value) {
+
+        $first_level = MenuLinkContent::create([
+            'title' => $first_key,
+            'weight' => count($menu_list) - 1,
+            'link' => ['uri' => 'internal:/' . $first_key],
+            'menu_name' => $menu,
+            'expanded' => TRUE,
+        ]);
+        $first_level->save();
+
+        if (count($menu_list[$first_key]) - 1) {
+
+            foreach ($menu_list[$first_key] as $second_key => $second_value) {
+
+                $second_level = MenuLinkContent::create([
+                    'title' => $second_key,
+                    'link' => ['uri' => 'internal:/node/' . $second_key],
+                    'parent' => $first_level->getPluginId(),
+                    'expanded' => TRUE,
+                ]);
+                $second_level->save();
+            }
+        }
+    }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function hello_world_uninstall()
+{
+    $menu = 'main';
+    $menu_handler = \Drupal::service('plugin.manager.menu.link');
+    $menu_handler->deleteLinksInMenu($menu);
+}

@@ -1,0 +1,1 @@
+Create menu programatically in "main menu" tab during the installation of module and delete all menu item on uninstall.
