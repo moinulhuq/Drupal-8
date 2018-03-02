@@ -1,0 +1,1 @@
+Create menu root programatically during the installation of module and delete menu root on uninstall.

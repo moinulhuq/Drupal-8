@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function hello_world_install()
+{
+    if(is_null(\Drupal::entityTypeManager()->getStorage('menu')->load('menu_test'))) {
+
+        \Drupal::entityTypeManager()->getStorage('menu')
+            ->create([
+                'id' => 'menu_test',
+                'label' => 'Test menu',
+                'description' => 'Description text',
+            ])->save();
+    }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function hello_world_uninstall()
+{
+    if(!is_null(\Drupal::entityTypeManager()->getStorage('menu')->load('menu_test'))) {
+
+        \Drupal::entityTypeManager()->getStorage('menu')->load('menu_test')->delete();
+    }
+}
