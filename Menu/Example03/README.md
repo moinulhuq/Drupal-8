@@ -1,0 +1,1 @@
+Create menu and menu root using yml during the installation of module and delete menu and menu root on uninstall.

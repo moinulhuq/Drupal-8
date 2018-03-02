@@ -1,0 +1,56 @@
+hello_world.show:
+  title: 'Show'
+  description: 'Show page'
+  parent: main
+  menu_name: main
+  weight: 99
+  route_name: 'hello_world.show_controller_show'
+  route_parameters: { show: 1 }
+hello_world.aboutus:
+  title: 'AboutUs'
+  description: 'About Us page'
+  parent: main
+  menu_name: main
+  weight: 100
+  route_name: 'hello_world.about_controller_about'
+  options:
+    attributes:
+      target: _blank
+      class: about-class
+hello_world.contactus:
+  title: 'ContactUs'
+  description: 'Contact Us page'
+  parent: main
+  menu_name: main
+  weight: 101
+  route_name: 'hello_world.contact_controller_contact'
+hello_world.products:
+  title: 'Products'
+  description: 'Products page'
+  parent: main
+  menu_name: main
+  weight: 102
+  route_name: 'hello_world.product_controller_product'
+hello_world.products.laptop:
+  title: 'Laptop'
+  description: 'Laptop page'
+  parent: hello_world.products
+  menu_name: main
+  weight: 103
+  route_name: 'hello_world.product_controller_laptop'
+hello_world.products.tv:
+  title: 'TV'
+  description: 'TV page'
+  parent: hello_world.products
+  menu_name: main
+  weight: 104
+  route_name: 'hello_world.product_controller_tv'
+hello_world.externallink:
+  title: 'Google'
+  description: 'Google'
+  parent: hello_world.products
+  menu_name: main
+  weight: 105
+  url: 'https://www.google.com'
+
+# Check https://www.drupal8.ovh/en/tutoriels/37/drupal-8-menu-system

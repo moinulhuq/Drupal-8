@@ -1,0 +1,13 @@
+langcode: en
+status: true
+#dependencies: {  }
+dependencies:
+  module:
+    - hello_world
+  enforced:
+    module:
+      - hello_world
+id: menu_test
+label: Menu test
+description: 'Description text'
+locked: true

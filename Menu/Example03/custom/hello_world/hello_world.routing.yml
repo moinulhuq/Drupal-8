@@ -1,0 +1,48 @@
+
+hello_world.about_controller_about:
+  path: '/hello_world/about'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\AboutController::about'
+    _title: '[]'
+  requirements:
+    _permission: 'access content'
+
+hello_world.contact_controller_contact:
+  path: '/hello_world/contact'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\ContactController::contact'
+    _title: '[]'
+  requirements:
+    _permission: 'access content'
+
+hello_world.product_controller_product:
+  path: '/hello_world/product'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\ProductController::product'
+    _title: '[]'
+  requirements:
+    _permission: 'access content'
+
+hello_world.product_controller_laptop:
+  path: '/hello_world/products/laptop'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\ProductLaptopController::laptop'
+    _title: '[]'
+  requirements:
+    _permission: 'access content'
+
+hello_world.product_controller_tv:
+  path: '/hello_world/products/tv'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\ProductTvController::tv'
+    _title: '[]'
+  requirements:
+    _permission: 'access content'
+
+hello_world.show_controller_show:
+  path: '/hello_world/show/{show}'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\ShowController::show'
+    _title: '[]'
+  requirements:
+    _permission: 'access content'
