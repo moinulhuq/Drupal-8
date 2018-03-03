@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+
+/**
+ * Implements hook_link_alter().
+ */
+function hello_world_link_alter(&$variables)
+{
+    if($variables['text'] =='Home'){
+
+        // To change the title of the menu 'About' menu item
+        $variables['text'] ='your home';
+
+        // Changing the routeName
+        $variables['url'] = $variables['url']->fromUserInput('/hello_world/hello');
+
+        //To add attributes
+        $variables['options']['attributes']['onClick'] = "call()";
+    }
+}
