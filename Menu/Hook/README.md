@@ -1,4 +1,4 @@
-Drupal block hooks
+Drupal menu hooks
 -------------------
 ```
 hook_link_alter()
