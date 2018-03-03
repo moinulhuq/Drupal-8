@@ -1,0 +1,25 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+hello_world.general_controller_hello_subpage:
+  path: '/hello_world/hello/subpage'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hellosubpage'
+    _title: 'Sub Page'
+  requirements:
+    _permission: 'access content'
+
+hello_world.general_controller_hello_subpage_param:
+  path: '/hello_world/hello/subpage/{param}'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hellosubpageparam'
+    _title: 'Param'
+  requirements:
+    _permission: 'access content'
+
