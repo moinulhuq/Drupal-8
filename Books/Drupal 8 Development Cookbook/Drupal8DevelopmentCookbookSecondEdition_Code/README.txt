@@ -1,0 +1,1 @@
+Chapter 1,2,3,8,9,12 are GUI based chapters and need to be tested by following the steps given in the chapter.

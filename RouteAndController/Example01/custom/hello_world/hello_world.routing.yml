@@ -1,0 +1,10 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Hello World'
+  requirements:
+    _permission: 'access content'
+
+# Check https://www.drupal.org/docs/8/api/routing-system/structure-of-routes
