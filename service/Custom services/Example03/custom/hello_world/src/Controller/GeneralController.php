@@ -18,7 +18,6 @@ class GeneralController extends ControllerBase {
     public function car() {
 
         $car  = \Drupal::service('hello_world.toyota');
-        $foo = "bar";
         return [
           '#type' => 'markup',
           '#markup' => $car->getCar(),
