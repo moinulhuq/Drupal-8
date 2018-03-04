@@ -1,0 +1,13 @@
+parameters:
+  car_company:
+    - {company: 'Toyota', origin: 'Japan', url: "https://www.toyota.co.nz/"}
+    - {company: 'Alfa Romeo', origin: 'Italy', url: "http://www.alfaromeo.com/"}
+    - {company: 'Ford', origin: 'USA', url: "https://www.ford.co.nz/"}
+
+services:
+  hello_world.car:
+    class: Drupal\hello_world\CarService
+    arguments: ['%car_company%']
+  hello_world.toyota:
+    class: Drupal\hello_world\ToyotaService
+    arguments: ['@hello_world.car']
