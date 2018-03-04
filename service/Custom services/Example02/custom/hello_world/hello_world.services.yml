@@ -10,7 +10,7 @@ parameters:
     - {title: 'Talking with Tech Leads', author: 'Patrick Kua', url: 'https://leanpub.com/talking-with-tech-leads'}
   leanpub.other:
     location: 'online'
-    year: 'August 2005'
+    year: 2005
 
 
 services:
