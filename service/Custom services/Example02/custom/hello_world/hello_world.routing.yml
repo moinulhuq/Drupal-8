@@ -1,0 +1,8 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/listbooks'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::listbooks'
+    _title: 'List of Books'
+  requirements:
+    _permission: 'access content'

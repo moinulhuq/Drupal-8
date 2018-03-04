@@ -1,0 +1,4 @@
+services:
+  hello_world.default:
+    class: Drupal\hello_world\GeneralService
+    arguments: []
