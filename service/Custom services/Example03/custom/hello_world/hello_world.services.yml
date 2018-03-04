@@ -1,0 +1,6 @@
+services:
+  hello_world.car:
+    class: Drupal\hello_world\CarService
+  hello_world.toyota:
+    class: Drupal\hello_world\ToyotaService
+    arguments: ['@hello_world.car']
