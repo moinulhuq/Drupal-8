@@ -1,0 +1,8 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/car'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::car'
+    _title: 'Car Company'
+  requirements:
+    _permission: 'access content'

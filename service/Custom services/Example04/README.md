@@ -1,1 +1,1 @@
-Drupal Services and Dependency injection with parameter.
+Drupal Services container and Dependency injection using \Drupal class.
