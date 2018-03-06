@@ -1,3 +1,12 @@
+Plugins are a design pattern that let you extend a module or service. Drupal 8 has four plugin discovery systems.
+
+```yml
+Annotated - Used for blocks, views, rules, Queue API, and more.
+YAML - Used for menus, routes, and services.
+Hook - D7 carry over hook system, still used in many places.
+Discovery Decorators ← Wrap around other plugin systems to replace/improve on the classic info alter hooks from previous Drupal versions.
+```
+
 Simple Plugin system in Drupal 8. To create plugin follow the steps
 
 If you are using drupal console
