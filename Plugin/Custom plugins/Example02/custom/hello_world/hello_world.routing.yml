@@ -1,0 +1,8 @@
+
+hello_world.general_controller_hello_41:
+  path: '/hello_world/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Plugin'
+  requirements:
+    _permission: 'access content'
