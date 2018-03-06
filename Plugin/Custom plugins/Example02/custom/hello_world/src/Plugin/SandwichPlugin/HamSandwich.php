@@ -19,7 +19,7 @@ use Drupal\hello_world\Plugin\SandwichPluginBase;
  *   label = @Translation("This is an example value that is defined in the annotation."),
  * )
  */
-class HamSandwich extends SandwichPluginBase {
+class HamSandwich extends SandwichPluginBase implements SandwichPluginInterface {
 
     /**
      * Get a price of ham sandwich.
