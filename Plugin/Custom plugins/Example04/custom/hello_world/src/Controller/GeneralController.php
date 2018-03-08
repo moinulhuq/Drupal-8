@@ -17,6 +17,8 @@ class GeneralController extends ControllerBase {
    */
   public function hello() {
 
+    // Check https://drupalize.me/blog/201409/unravelling-drupal-8-plugin-system
+
     $plugin  =  \Drupal::service('plugin.manager.form_plugin')->createInstance('login_form');
     $build['#title'] = $plugin->description();
     $build['form'] =  $plugin->getForm();
