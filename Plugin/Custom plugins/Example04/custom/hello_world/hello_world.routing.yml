@@ -1,0 +1,24 @@
+
+hello_world.login_form:
+  path: '/hello_world/form/login'
+  defaults:
+    _form: '\Drupal\hello_world\Form\LoginForm'
+    _title: 'LoginForm'
+  requirements:
+    _access: 'TRUE'
+
+hello_world.contact_form:
+  path: '/hello_world/form/contact'
+  defaults:
+    _form: '\Drupal\hello_world\Form\ContactForm'
+    _title: 'ContactForm'
+  requirements:
+    _access: 'TRUE'
+
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: ''
+  requirements:
+    _permission: 'access content'

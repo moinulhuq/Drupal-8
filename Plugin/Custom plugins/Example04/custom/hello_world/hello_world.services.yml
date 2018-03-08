@@ -1,0 +1,4 @@
+services:
+  plugin.manager.form_plugin:
+    class: Drupal\hello_world\Plugin\FormPluginManager
+    parent: default_plugin_manager
