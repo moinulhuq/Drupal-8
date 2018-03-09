@@ -1,0 +1,4 @@
+services:
+  plugin.manager.general_plugin:
+    class: Drupal\hello_world\GeneralPluginManager
+    arguments: ['@module_handler', '@cache.discovery', '@module_handler']
