@@ -1,0 +1,4 @@
+submit_button_label: 'Submit'
+name_field_settings:
+  field_label: 'Your name'
+  field_size: 50
