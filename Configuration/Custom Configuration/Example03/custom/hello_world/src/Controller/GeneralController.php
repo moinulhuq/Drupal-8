@@ -27,6 +27,11 @@ class GeneralController extends ControllerBase {
       $config->set('cache.page.max_age', 1)->save();
       $message = $config->get('cache.page.max_age');
 
+      // Built in configuration "System site name" change
+      $config = \Drupal::service('config.factory')->getEditable('system.site');
+      $config->set('name', 'University Service')->save();
+      $message = $config->get('name');
+
       return [
           '#type' => 'markup',
           '#markup' => $message,
