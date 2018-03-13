@@ -32,6 +32,17 @@ class GeneralController extends ControllerBase {
       $config->set('name', 'University Service')->save();
       $message = $config->get('name');
 
+      // Clear or delete "System site name"
+      $config = \Drupal::service('config.factory')->getEditable('system.site');
+
+      // Remove single value from configuration object.
+      $config->clear('name')->save();
+
+      // Remove entire configuration object.
+      $config->delete();
+
+      $message = $config->get('name');
+
       return [
           '#type' => 'markup',
           '#markup' => $message,
