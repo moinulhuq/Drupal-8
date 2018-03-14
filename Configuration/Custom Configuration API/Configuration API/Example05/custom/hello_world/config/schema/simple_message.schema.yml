@@ -1,0 +1,18 @@
+hello_world.simple_message.*:
+  type: config_entity
+  label: 'Simple message config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    message:
+      type: text
+      label: 'Message'
+    messagetype:
+      type: string
+      label: 'Message Type'
+    uuid:
+      type: string
