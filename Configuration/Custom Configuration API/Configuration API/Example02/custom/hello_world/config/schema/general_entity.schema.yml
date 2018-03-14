@@ -1,0 +1,12 @@
+hello_world.general_entity.*:
+  type: config_entity
+  label: 'General entity config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

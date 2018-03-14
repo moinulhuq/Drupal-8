@@ -1,0 +1,9 @@
+
+# General entity menu items definition
+entity.general_entity.collection:
+  title: 'General entity'
+  route_name: entity.general_entity.collection
+  description: 'List General entity (bundles)'
+  parent: system.admin_structure
+  weight: 99
+

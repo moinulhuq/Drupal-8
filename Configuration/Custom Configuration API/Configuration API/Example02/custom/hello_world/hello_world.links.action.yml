@@ -1,0 +1,6 @@
+entity.general_entity.add_form:
+  route_name: entity.general_entity.add_form
+  title: 'Add General entity'
+  appears_on:
+    - entity.general_entity.collection
+
