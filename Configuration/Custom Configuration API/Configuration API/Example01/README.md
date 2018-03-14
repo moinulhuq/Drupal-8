@@ -262,3 +262,5 @@ class GeneralEntityDeleteForm extends EntityConfirmFormBase {
 
 }
 ```
+
+To delete the configuration of our entity.
