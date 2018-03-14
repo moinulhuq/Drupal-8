@@ -1,0 +1,6 @@
+entity.simple_message.collection:
+  title: 'Simple message'
+  route_name: entity.simple_message.collection
+  description: 'List Simple message (bundles)'
+  parent: system.admin_structure
+  weight: 99
