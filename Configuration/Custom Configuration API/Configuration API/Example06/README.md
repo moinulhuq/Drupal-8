@@ -1,0 +1,1 @@
+Creating a configuration entity type in Drupal 8 and accessing the data from database.

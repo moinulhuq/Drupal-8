@@ -1,0 +1,7 @@
+hello_world.default_controller_hello:
+  path: '/hello_world/hello'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Configuration Message list'
+  requirements:
+    _permission: 'access content'
