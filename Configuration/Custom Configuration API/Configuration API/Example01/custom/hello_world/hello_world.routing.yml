@@ -1,0 +1,31 @@
+entity.general_entity.collection:
+  path: '/admin/structure/general_entity'
+  defaults:
+    _entity_list: 'general_entity'
+    _title: 'General Entity'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.general_entity.add_form:
+  path: '/admin/structure/general_entity/add'
+  defaults:
+    _entity_form: 'general_entity.add'
+    _title: 'General Entity Add'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.general_entity.edit_form:
+  path: '/admin/structure/general_entity/{general_entity}/edit'
+  defaults:
+    _entity_form: 'general_entity.edit'
+    _title: 'General Entity Edit'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.general_entity.delete_form:
+  path: '/admin/structure/general_entity/{general_entity}/delete'
+  defaults:
+    _entity_form: 'general_entity.delete'
+    _title: 'General Entity Delete'
+  requirements:
+    _permission: 'administer site configuration'
