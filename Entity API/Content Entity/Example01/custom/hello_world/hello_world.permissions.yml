@@ -1,0 +1,19 @@
+add inventory entities:
+  title: 'Create new Inventory entities'
+
+administer inventory entities:
+  title: 'Administer Inventory entities'
+  description: 'Allow to access the administration form to configure Inventory entities.'
+  restrict access: true
+
+delete inventory entities:
+  title: 'Delete Inventory entities'
+
+edit inventory entities:
+  title: 'Edit Inventory entities'
+
+view published inventory entities:
+  title: 'View published Inventory entities'
+
+view unpublished inventory entities:
+  title: 'View unpublished Inventory entities'

@@ -1,0 +1,3 @@
+A custom entity represents any structured content that you want to define outside of Drupal’s node, comment, file, user, and taxonomy entities. Examining each of these entity types, you can see that there are fundamental differences between each of them; for example, a node has an author and date published whereas a user does not have either of those two fields.
+
+A node entity type used for capturing, storing, and displaying information, there may be instances where you need something special type of entity and you don’t want to mingle that with node entity type. In those rare cases, a custom entity type is likely the best solution.

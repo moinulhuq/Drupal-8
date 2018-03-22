@@ -1,0 +1,22 @@
+# Inventory routing definition
+inventory.settings_tab:
+  route_name: inventory.settings
+  title: 'Settings'
+  base_route: inventory.settings
+
+entity.inventory.canonical:
+  route_name: entity.inventory.canonical
+  base_route: entity.inventory.canonical
+  title: 'View'
+
+entity.inventory.edit_form:
+  route_name: entity.inventory.edit_form
+  base_route: entity.inventory.canonical
+  title: 'Edit'
+
+entity.inventory.delete_form:
+  route_name:  entity.inventory.delete_form
+  base_route:  entity.inventory.canonical
+  title: Delete
+  weight: 10
+

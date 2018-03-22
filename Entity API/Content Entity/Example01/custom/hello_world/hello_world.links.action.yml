@@ -1,0 +1,5 @@
+entity.inventory.add_form:
+  route_name: entity.inventory.add_form
+  title: 'Add Inventory'
+  appears_on:
+    - entity.inventory.collection

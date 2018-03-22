@@ -1,0 +1,14 @@
+
+# Inventory menu items definition
+entity.inventory.collection:
+  title: 'Inventory list'
+  route_name: entity.inventory.collection
+  description: 'List Inventory entities'
+  parent: system.admin_structure
+  weight: 100
+
+inventory.admin.structure.settings:
+  title: 'Inventory settings'
+  description: 'Configure Inventory entities'
+  route_name: inventory.settings
+  parent: system.admin_structure

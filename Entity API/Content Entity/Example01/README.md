@@ -1,0 +1,1 @@
+Content Entity usually need to create under "modulename\src\Entity\Entity.php"
