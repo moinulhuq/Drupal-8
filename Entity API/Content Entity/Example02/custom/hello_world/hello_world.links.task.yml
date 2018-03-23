@@ -1,0 +1,21 @@
+contact_person.settings_tab:
+  route_name: contact_person.settings
+  title: 'Settings'
+  base_route: contact_person.settings
+
+entity.contact_person.canonical:
+  route_name: entity.contact_person.canonical
+  base_route: entity.contact_person.canonical
+  title: 'View'
+
+entity.contact_person.edit_form:
+  route_name: entity.contact_person.edit_form
+  base_route: entity.contact_person.canonical
+  title: 'Edit'
+
+entity.contact_person.delete_form:
+  route_name:  entity.contact_person.delete_form
+  base_route:  entity.contact_person.canonical
+  title: Delete
+  weight: 10
+

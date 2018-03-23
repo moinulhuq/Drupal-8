@@ -1,0 +1,12 @@
+entity.contact_person.collection:
+  title: 'Contact person list'
+  route_name: entity.contact_person.collection
+  description: 'List Contact person entities'
+  parent: system.admin_structure
+  weight: 100
+
+contact_person.admin.structure.settings:
+  title: 'Contact person settings'
+  description: 'Configure Contact person entities'
+  route_name: contact_person.settings
+  parent: system.admin_structure

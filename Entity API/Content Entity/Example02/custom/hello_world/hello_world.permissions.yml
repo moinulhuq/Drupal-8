@@ -1,0 +1,19 @@
+add contact person entities:
+  title: 'Create new Contact person entities'
+
+administer contact person entities:
+  title: 'Administer Contact person entities'
+  description: 'Allow to access the administration form to configure Contact person entities.'
+  restrict access: true
+
+delete contact person entities:
+  title: 'Delete Contact person entities'
+
+edit contact person entities:
+  title: 'Edit Contact person entities'
+
+view published contact person entities:
+  title: 'View published Contact person entities'
+
+view unpublished contact person entities:
+  title: 'View unpublished Contact person entities'
