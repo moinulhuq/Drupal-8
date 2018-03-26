@@ -1,0 +1,30 @@
+add contact person entities:
+  title: 'Create new Contact person entities'
+
+administer contact person entities:
+  title: 'Administer Contact person entities'
+  description: 'Allow to access the administration form to configure Contact person entities.'
+  restrict access: true
+
+delete contact person entities:
+  title: 'Delete Contact person entities'
+
+edit contact person entities:
+  title: 'Edit Contact person entities'
+
+view published contact person entities:
+  title: 'View published Contact person entities'
+
+view unpublished contact person entities:
+  title: 'View unpublished Contact person entities'
+
+view all contact person revisions:
+  title: 'View all Contact person revisions'
+
+revert all contact person revisions:
+  title: 'Revert all Contact person revisions'
+  description: 'Role requires permission <em>view Contact person revisions</em> and <em>edit rights</em> for contact person entities in question or <em>administer contact person entities</em>.'
+
+delete all contact person revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Contact person revisions</em> and <em>delete rights</em> for contact person entities in question or <em>administer contact person entities</em>.'

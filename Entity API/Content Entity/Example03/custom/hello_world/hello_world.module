@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains hello_world.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function hello_world_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the hello_world module.
+    case 'help.page.hello_world':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function hello_world_theme() {
+  $theme = [];
+  $theme['contact_person'] = [
+    'render element' => 'elements',
+    'file' => 'contact_person.page.inc',
+    'template' => 'contact_person',
+  ];
+  $theme['contact_person_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'contact_person.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+* Implements hook_theme_suggestions_HOOK().
+*/
+function hello_world_theme_suggestions_contact_person(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#contact_person'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'contact_person__' . $sanitized_view_mode;
+  $suggestions[] = 'contact_person__' . $entity->bundle();
+  $suggestions[] = 'contact_person__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'contact_person__' . $entity->id();
+  $suggestions[] = 'contact_person__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

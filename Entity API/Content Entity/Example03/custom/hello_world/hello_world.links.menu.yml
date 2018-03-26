@@ -1,0 +1,18 @@
+
+# Contact person menu items definition
+entity.contact_person.collection:
+  title: 'Contact person list'
+  route_name: entity.contact_person.collection
+  description: 'List Contact person entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Contact person type menu items definition
+entity.contact_person_type.collection:
+  title: 'Contact person type'
+  route_name: entity.contact_person_type.collection
+  description: 'List Contact person type (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
