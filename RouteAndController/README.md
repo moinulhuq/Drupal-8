@@ -1,0 +1,1 @@
+Check: https://www.drupal.org/docs/8/api/routing-system/structure-of-routes
