@@ -1,0 +1,8 @@
+# add config form to menu link
+hello_world.ip_list:
+  title: 'IP List'
+  route_name: hello_world.ip_list
+  description: 'IP List entry point'
+  parent: system.admin_config_system
+  weight: 99
+

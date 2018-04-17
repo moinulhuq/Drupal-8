@@ -1,0 +1,22 @@
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  options:
+    _auth: [ 'custom_authentication_provider' ]
+    no_cache: 'TRUE'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Authentication Service Provider'
+  requirements:
+    _permission: 'access content'
+
+# for config form
+hello_world.ip_list:
+  path: '/admin/config/hello_world/iplist'
+  defaults:
+    _form: '\Drupal\hello_world\Form\ipList'
+    _title: 'ipList'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
