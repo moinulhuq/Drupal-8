@@ -1,0 +1,10 @@
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  options:
+    _auth: [ 'custom_authentication_provider' ]
+    no_cache: 'TRUE'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Authentication Service Provider'
+  requirements:
+    _permission: 'access content'
