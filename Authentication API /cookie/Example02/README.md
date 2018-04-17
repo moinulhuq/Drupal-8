@@ -1,0 +1,1 @@
+Drupal 8 Cookie authentication using custom access check.

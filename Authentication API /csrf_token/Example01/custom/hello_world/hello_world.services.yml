@@ -1,0 +1,6 @@
+services:
+  hello_world.custom_access_check:
+    class: Drupal\hello_world\CustomAccessCheck
+    arguments: ['@csrf_token']
+    tags:
+          - { name: access_check, applies_to: _custom_access_check }

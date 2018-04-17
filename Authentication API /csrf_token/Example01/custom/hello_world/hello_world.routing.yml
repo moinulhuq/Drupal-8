@@ -1,0 +1,9 @@
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  options:
+    no_cache: 'TRUE'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Your are Authentic'
+  requirements:
+    _custom_access_check: 'TRUE'

@@ -1,0 +1,1 @@
+Drupal 8 Basic authentication and Cookie authentication using custom access check. Here _auth: [ 'basic_auth', 'cookie' ] means, you are able to see this page if you are already logged in or it will prompt you to login.
