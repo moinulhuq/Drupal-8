@@ -1,0 +1,10 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  options:
+    _auth: ['token_auth_provider']
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+    _title: 'Authentication using token'
+  requirements:
+    _permission: 'access content'

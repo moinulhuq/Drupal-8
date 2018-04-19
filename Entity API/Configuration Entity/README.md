@@ -1,1 +1,3 @@
 Defining a configuration entity type is somewhat similar to defining a content entity type. The configuration has a proper Create, Read, Update, and Delete (CRUD) process that can be managed. Configuration entities are not fieldable. All the attributes of a configuration entity are defined in its configuration schema definition.
+
+Check: https://www.drupal.org/docs/8/api/configuration-api/configuration-schemametadata

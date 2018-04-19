@@ -1,0 +1,18 @@
+hello_world.token_auth.*:
+  type: config_entity
+  label: 'Token auth config'
+  mapping:
+    id:
+      type: String
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: String
+    token:
+      type: String
+      label: 'Token'
+    active:
+      type: Boolean
+      label: 'Active'

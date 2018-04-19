@@ -1,0 +1,9 @@
+
+# Token auth menu items definition
+entity.token_auth.collection:
+  title: 'Token Generator'
+  route_name: entity.token_auth.collection
+  description: 'List Token auth'
+  parent: system.admin_structure
+  weight: 99
+

@@ -123,3 +123,5 @@ applies(Request $request): (required) This method returns either TRUE, or FALSE.
 
 authenticate(Request $request): (required) The method responsible for all other authorization logic if this provider was called.
 ```
+
+Check: https://niklan.net/blog/166

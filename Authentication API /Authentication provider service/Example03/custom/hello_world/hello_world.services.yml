@@ -1,0 +1,6 @@
+services:
+  authentication.hello_world:
+    class: Drupal\hello_world\Authentication\Provider\TokenAuthProvider
+    arguments: ['@config.factory', '@entity_type.manager']
+    tags:
+      - { name: authentication_provider, provider_id: token_auth_provider, priority: 100 }

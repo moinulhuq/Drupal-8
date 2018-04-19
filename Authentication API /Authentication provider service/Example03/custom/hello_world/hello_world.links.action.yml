@@ -1,0 +1,6 @@
+entity.token_auth.add_form:
+  route_name: entity.token_auth.add_form
+  title: 'Add Token auth'
+  appears_on:
+    - entity.token_auth.collection
+
