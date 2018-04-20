@@ -1,0 +1,8 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  defaults:
+    _title_callback: '\Drupal\hello_world\Controller\GeneralController::title'
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+  requirements:
+    _permission: 'access content'

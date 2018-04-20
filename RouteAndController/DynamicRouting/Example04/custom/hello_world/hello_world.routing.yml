@@ -1,0 +1,10 @@
+
+hello_world.general_controller_hello:
+  path: '/hello_world/hello'
+  defaults:
+    _title: 'From Static route'
+    _controller: '\Drupal\hello_world\Controller\GeneralController::hello'
+  requirements:
+    _permission: 'access content'
+route_callbacks:
+  - '\Drupal\hello_world\Routing\HelloRoutes::routes'
